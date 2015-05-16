@@ -1,0 +1,43 @@
+<div class="container" ng-class="{loading: isLoading}"> 
+	<div ng-show="!isLoading" id="countries">  
+	  <span>Please enter to filter:&nbsp;</span>
+	  <input type="text" ng-model="search">
+	  <br/>
+	  <br/>
+	  <br/>
+	  <div class="scroll">
+		  <table class="table table-bordered">
+		    <thead>
+		      <tr>
+		        <th>Name</th>
+		        <th>Country Code</th>
+		        <th>Capital</th>
+		        <th>Area in km<sup>2</sup></th>
+		        <th>Population</th>
+		        <th>Continent</th>
+		      </tr>
+		    </thead>
+		    <tbody>
+		      
+		      	<tr ng-repeat="result in results | filter:search" ng-click="gotoDetail(result)">
+		         <td>{{result.countryName}}</td>
+		         <td>{{result.countryCode}}</td>
+		         <td>{{result.capital}}</td>
+		         <td>{{result.areaInSqKm | number:0}}</td>
+		         <td>{{result.population | number:0}}</td>
+		         <td>{{result.continent}}</td>
+
+		       </tr>
+		      
+		    </tbody>
+	      </table> 
+	    </div>  
+	    <br/>
+        <br/>
+        <br/>
+        <br/>
+
+	    <a href="#/" class="button">Home</a>   
+    </div>
+
+</div>

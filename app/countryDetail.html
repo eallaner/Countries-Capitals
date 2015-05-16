@@ -1,0 +1,67 @@
+<div class="container" ng-class="{loading: isLoading}">
+  <div ng-show="!isLoading" class="row" id="detail">
+	
+	<h2>{{detailShow.counName}}</h2>
+	<div class="row">
+		<p class="col-xs-offset-1 col-xs-4" style="text-align:right">Population of Country:</p>
+		<p class="col-xs-6 col-xs-offset-1" style="text-align:left">{{detailShow.counPop | number:0}}</p>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+		<p class="col-xs-offset-1 col-xs-4" style="text-align:right">Area:</p>
+		<p class="col-xs-6 col-xs-offset-1" style="text-align:left">{{detailShow.counArea | number:0}} &nbsp;km<sup>2</sup></p>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+		<p class="col-xs-offset-1 col-xs-4" style="text-align:right">Capital:</p>
+		<p class="col-xs-6 col-xs-offset-1"  style="text-align:left">{{detailShow.cap}}</p>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+		<p class="col-xs-offset-1 col-xs-4" style="text-align:right">Population of Capital:</p>
+		<p class="col-xs-6 col-xs-offset-1" style="text-align:left">{{detailShow.capPop | number:0}}</p>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+		<p class="col-xs-offset-1 col-xs-4" style="text-align:right">Neighbor Countries (up to 3):</p>
+		<p class="col-xs-6 col-xs-offset-1" style="text-align:left">
+           <a ng-repeat="neighbor in detailShow.counNeighbor" ng-href="#/countries/{{neighbor}}">
+           	    &nbsp;&nbsp;{{neighbor}}&nbsp;&nbsp;
+           </a>			
+		</p>
+		<br/>
+        <br/>
+        <br/>
+        <br/>
+		<img class="col-xs-offset-2 col-xs-2" id="map" ng-src="http://www.geonames.org/img/country/250/{{detailShow.counCode | uppercase}}.png" />
+		<img class="col-xs-2" id="flag" ng-src="http://www.geonames.org/flags/x/{{detailShow.counCode | lowercase}}.gif" />
+		<br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <a href="#/" class="button col-xs-offset-3 col-xs-3">Home</a>   
+        <a href="#/countries" class="button col-xs-offset-3 col-xs-3">Browse Countries</a>   
+
+
+	</div>
+	
+	
+
+	
+
+
+
+  </div>
+</div>
