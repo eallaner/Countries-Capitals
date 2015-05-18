@@ -149,7 +149,7 @@ strong{
 	text-decoration:none;
     cursor:pointer;
 	padding:0.5em;
-    margin-left:65%;
+    margin-left:35%;
 	background-repeat:no-repeat;
 	border:1px solid rgba(153,153,102,0.5);
     background-position:bottom left;
@@ -180,9 +180,13 @@ strong{
     text-decoration: none !important;
 }
 
+#countries .button{
+	margin-left: 37%;
+}
+
 @media screen and (max-width: 1000px){
 	.button{
-        margin-left: 60%;
+        margin-left: 30%;
         font-size: 1.2em;
 	}
 	h1{
@@ -195,24 +199,41 @@ strong{
 		font-size: 1.3em;
 		padding-right:18%;
 	}
+	#countries a{
+		margin-left: 31% !important;
+    }
+	div.scroll{
+		margin-left: -2.5em !important;
+		width:94% !important;
+	}
 }
 
-@media screen and (max-width: 780px){
+
+@media screen and (max-width: 767px){
 	#homePage p{
 		font-size: 1.3em;
 		padding-right:1%;
+	}
+	div.scroll{
+		margin-left: -2em !important;
+		width:112% !important;
 	}
 }
 
 @media screen and (max-width: 700px){
 	.button{
-        margin-left: 55%;
+        margin-left: 28%;
     }
+    div.scroll{
+		margin-left: -3em !important;
+		width:120% !important;
+		font-size: 1em !important;
+	}
 }
 
 @media screen and (max-width: 620px){
 	.button{
-        margin-left: 50%;
+        margin-left: 30%;
         font-size: 1.1em;
     }
     h1{
@@ -221,11 +242,16 @@ strong{
 	h2{
 		font-size: 1.5em;
 	}
+	div.scroll{
+		margin-left: -4em !important;
+		width:126% !important;
+		font-size: 0.8em !important;
+	}
 }
 
 @media screen and (max-width: 550px){
 	.button{
-        margin-left: 40%;
+        margin-left: 25%;
         font-size: 1em;
     }
     h1{
@@ -235,17 +261,47 @@ strong{
 		font-size: 1em;
 		padding-right:1%;
 	}
+	div.scroll{
+		margin-left: -4em !important;
+		width:130% !important;
+		font-size: 0.8em !important;
+	}
+	
 }
 
 @media screen and (max-width: 480px){
 	.button{
-        margin-left: 35%;
+		margin-left: 20% !important;
         font-size: 0.8em;
+    }
+    #countries a{
+		margin-left: 28% !important;
     }
     h1{
 		font-size: 2em;
 	}
+
+	div.scroll{
+		margin-left: -5em !important;
+		width:132% !important;
+		font-size: 0.5em !important;
+	}
+	
+	#countries span, #countries input{
+		font-size: 0.8em !important;
+	}
 }
+
+@media screen and (max-width: 380px){
+	div.scroll{
+		margin-left: -5em !important;
+		width:145% !important;
+		font-size: 0.5em !important;
+	}
+
+}
+
+
 
 /* For Loading animation*/
 .loading{
@@ -298,6 +354,8 @@ input:focus{
 	text-align: center;
  }
 
+
+
  table td{
  	cursor: pointer;
  }
@@ -309,6 +367,7 @@ input:focus{
     overflow: scroll;
     background-color:rgba(153,153,102,0.3);
 }
+
 
 ::-webkit-scrollbar {
     width: 1em;
@@ -329,13 +388,16 @@ input:focus{
 }
 
 #detail p a{
-	font-size: 0.7em;
+	font-size: 0.5em;
 	background-color: rgba(153,153,102,0.6);
 	color:#000;
 	text-decoration: none;
 	padding-left:0.5em;
 	padding-right:0.5em;
 	margin-right:0.5em;
+	-webkit-border-radius: 0.8em;
+	-moz -border-radius: 0.8em;
+	border-radius: 0.8em;
 }
 
 #detail p a:hover{
@@ -345,11 +407,77 @@ input:focus{
 #detail img{
 	width:20em;
 	height:12em;
+	margin-bottom: 4em;
 }
 
 #detail .button{
-	display: inline;
+	margin-bottom: 1em;
+	margin-left:30%;
 }
+
+@media screen and (max-width:1000px){
+
+	#detail p{
+		font-size: 1.2em;
+	}
+
+	#detail img{
+	width:16em;
+	height:10em; 
+	margin-bottom: 4em;
+    }
+
+    
+
+    #detail .button{
+	margin-bottom: 1em;
+	margin-left:30%;
+	font-size: 1em;
+   } 
+
+}
+
+@media screen and (max-width:700px){
+	#detail p{
+		font-size: 1em;
+	}
+	#detail #map{
+	   margin-left:10%;
+    }
+
+    #detail img{
+	width:12em;
+	height:7em;
+	margin-bottom: 4em;
+    }
+
+    #detail .button{
+    	font-size: 0.6em;
+    	margin-left:35%;
+    }
+}
+
+@media screen and (max-width:600px){
+	 #detail img{
+		width:10em;
+		height:5em;
+	    }
+
+}
+
+@media screen and (max-width:480px){
+	 #detail img{
+	 	margin-top: 2em;
+		width:6em;
+		height:3em;
+		margin-bottom: 2em;
+	    }
+	#detail .button{
+		
+    }
+
+}
+
 
 
 
